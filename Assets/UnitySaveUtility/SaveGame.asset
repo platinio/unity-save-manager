@@ -9,6 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2c2bfa3ab0cf5b489df60cc5fd1a68c, type: 3}
-  m_Name: SaveSlot
+  m_Script: {fileID: 11500000, guid: 5afd156e272b75e408fc6ef235cc0f2d, type: 3}
+  m_Name: SaveGame
   m_EditorClassIdentifier: 
+  saveData:
+    name: 
+    coins: 0

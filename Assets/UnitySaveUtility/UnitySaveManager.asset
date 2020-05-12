@@ -9,6 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7388d175ac33c43478dfae7df31ff04a, type: 3}
-  m_Name: SaveManager
+  m_Script: {fileID: 11500000, guid: b97298182edab684aaaa235d2f4267f2, type: 3}
+  m_Name: UnitySaveManager
   m_EditorClassIdentifier: 
+  saveGame: {fileID: 11400000, guid: 79b78033b917a0a4ab3bd1249018f356, type: 2}
