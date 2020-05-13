@@ -12,6 +12,11 @@ namespace Platinio.SaveUtility
             return JsonUtility.ToJson(saveData);
         }
 
+        public void FromJson(string json)
+        {
+            saveData = JsonUtility.FromJson<PlaceHolderType>(json);
+        }
+
     }
 
 }

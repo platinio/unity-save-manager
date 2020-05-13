@@ -18,7 +18,7 @@ namespace Platinio.SaveUtility
 
             if (encrypt)
             {
-                
+                json = EncryptionUtility.Encrypt(json);
             }
 
             string filePath = Path.Combine(Application.persistentDataPath , fileName);
@@ -27,7 +27,15 @@ namespace Platinio.SaveUtility
 
         public void Load()
         {
-            string 
+            string filePath = Path.Combine(Application.persistentDataPath, fileName);
+            string json = File.ReadAllText(filePath);
+
+            if (encrypt)
+            {
+                json = EncryptionUtility.Decrypt(json);
+            }
+
+            saveGame.FromJson(json);
         }
 
     }

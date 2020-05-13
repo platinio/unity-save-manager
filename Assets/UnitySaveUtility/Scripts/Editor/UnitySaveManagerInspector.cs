@@ -8,19 +8,25 @@ namespace Platinio.SaveUtility
     public class UnitySaveManagerInspector : Editor
     {
 
+        private UnitySaveManager saveManager = null;
+
+        private void OnEnable()
+        {
+            saveManager = (UnitySaveManager)target;
+        }
+
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
 
-            if (GUILayout.Button("Encrypt Test"))
+            if (GUILayout.Button("Save"))
             {
-                string value = "James Ricardo Roman Caceres 25";
-                Debug.Log("encrypt test " + value);
-                string result = EncryptionUtility.Encrypt(value);
-                Debug.Log("encrypt result " + result);
-                Debug.Log("decrypt test ");
-                result = EncryptionUtility.Decrypt(result);
-                Debug.Log("decryption value " + result);
+                saveManager.Save();
+            }
+
+            if (GUILayout.Button("Load"))
+            {
+                saveManager.Load();
             }
 
         }
