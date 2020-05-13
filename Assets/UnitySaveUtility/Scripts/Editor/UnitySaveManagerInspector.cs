@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEditor;
-using Platinio.Encryption;
+using System.Diagnostics;
 
 namespace Platinio.SaveUtility
 {
@@ -27,6 +27,13 @@ namespace Platinio.SaveUtility
             if (GUILayout.Button("Load"))
             {
                 saveManager.Load();
+            }
+
+            if (GUILayout.Button("Open File Location"))
+            {
+                UnityEngine.Debug.Log(saveManager.FolderPath);
+                
+                Process.Start(@saveManager.FolderPath);
             }
 
         }
