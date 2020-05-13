@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: UnitySaveManager
   m_EditorClassIdentifier: 
   saveGame: {fileID: 11400000, guid: 79b78033b917a0a4ab3bd1249018f356, type: 2}
+  encrypt: 1
+  debug: 1
